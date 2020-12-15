@@ -5,7 +5,7 @@ var grade_2 = 0
 var grade_261 = 0
 var couter_261 = 1
 
-//////////////////////////////////////////////////////////////////////////////////
+
 
 document.querySelector('#form').addEventListener('submit',function(event){
 
@@ -19,7 +19,7 @@ document.querySelector('#form').addEventListener('submit',function(event){
     let code_sub  = document.getElementById('code-subject').value
     let gpa_in  = document.getElementById('gpa').value
 
-//////////////////////////////////////////////////////////////////////////////////
+
 
     if(document.getElementById('term1').checked) { 
         let term1  = document.getElementById('term1').value
@@ -31,7 +31,7 @@ document.querySelector('#form').addEventListener('submit',function(event){
     }
     console.log(gpa)
     
-//////////////////////////////////////////////////////////////////////////////////
+
 
     if(sub.length == 0 ){
         alert("โปรดกรอกชื่อวิชา !!")
@@ -55,7 +55,7 @@ document.querySelector('#form').addEventListener('submit',function(event){
     }
     else ff = true
 
-//////////////////////////////////////////////////////////////////////////////////    
+   
 
     if(ff){
         
@@ -73,7 +73,7 @@ document.querySelector('#form').addEventListener('submit',function(event){
         document.getElementById('term1').checked = null
         document.getElementById('term2').checked = null
 
-//////////////////////////////////////////////////////////////////////////////////
+
 
         if(sem  === "term1"){
 
@@ -103,7 +103,7 @@ document.querySelector('#form').addEventListener('submit',function(event){
             }
             console.log(grade)
         }
-        //////////////////////////////////////////////////////////////////////////////////
+        
         if(sem === "term2"){
 
             if (gpa_in === 'A' ){
@@ -133,7 +133,6 @@ document.querySelector('#form').addEventListener('submit',function(event){
             console.log(grade_2)
         }
 
-///////////////////////// Print to table 261 /////////////////////////////////////////////////////////
 
         var check = code_sub.substring(0, 3);
         if( (check === "261") || (check === "269") ){
@@ -171,7 +170,7 @@ document.querySelector('#form').addEventListener('submit',function(event){
             couter_261++
             console.log(grade_261)
         }
-///////////////////////// Print to table /////////////////////////////////////////////////////////
+
 
         if(sem  === "term1"){
             const tables = document.querySelector('#showtable')
@@ -180,16 +179,16 @@ document.querySelector('#form').addEventListener('submit',function(event){
         
             const name = document.createElement('td')
             const name_1 = document.createElement('san')
-            name_1.setAttribute("style", "color: black; padding: 20px;")
+            name_1.setAttribute("style", "color:  white; padding: 20px;")
             name_1.innerHTML = sub
             name.append(name_1)
         
             const code = document.createElement('td')
-            code.setAttribute("style", "color: black; padding: 10px;")
+            code.setAttribute("style", "color:  white; padding: 10px;")
             code.innerHTML = code_sub
                 
             const grade_s = document.createElement('td')
-            grade_s.setAttribute("style", "color: black; padding: 30px;")
+            grade_s.setAttribute("style", "color:  white; padding: 30px;")
             grade_s.innerHTML = gpa_in
 
             const Dbut = document.createElement('td')
@@ -218,7 +217,7 @@ document.querySelector('#form').addEventListener('submit',function(event){
         
             couter++
         }
-        //////////////////////////////////////////////////////////////////////////////////
+   
         if(sem === "term2") {
             const tables_n = document.querySelector('#showtable_2')
         
@@ -226,16 +225,16 @@ document.querySelector('#form').addEventListener('submit',function(event){
         
             const name_n = document.createElement('td')
             const name_2 = document.createElement('san')
-            name_2.setAttribute("style", "color: black; padding: 20px;")
+            name_2.setAttribute("style", "color:  white; padding: 20px;")
             name_2.innerHTML = sub
             name_n.append(name_2)
         
             const code_n = document.createElement('td') 
-            code_n.setAttribute("style", "color: black; padding: 10px;")
+            code_n.setAttribute("style", "color: white; padding: 10px;")
             code_n.innerHTML = code_sub
                 
             const grade_n = document.createElement('td')
-            grade_n.setAttribute("style", "color: black; padding: 30px;")
+            grade_n.setAttribute("style", "color:  white; padding: 30px;")
             grade_n.innerHTML = gpa_in
         
             list_n.append(name_n)
@@ -252,9 +251,12 @@ document.querySelector('#form').addEventListener('submit',function(event){
             couter_2++
         }
 
-///////////////////////////////////////////////////////////////////////////////////
+
 
 
     }
 
 },false)
+
+
+
